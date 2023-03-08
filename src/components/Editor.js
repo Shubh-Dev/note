@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ReactMde from 'react-mde';
 import Showdown from 'showdown';
+import { PropTypes } from 'prop-types';
 
 const Editor = ({ currentNote, updateNote }) => {
   const [selectedTab, setSelectedTab] = useState('Write');
@@ -26,6 +27,11 @@ const Editor = ({ currentNote, updateNote }) => {
 
     </section>
   );
+};
+
+Editor.propTypes = {
+  currentNote: PropTypes.string.isRequired,
+  updateNote: PropTypes.string.isRequired,
 };
 
 export default Editor;

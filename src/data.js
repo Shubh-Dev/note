@@ -1,4 +1,4 @@
-export const data = [
+data = [
   {
     id: 1,
     body: `### This just in! Markdown is an *awesome* way to write **basic HTML** by typing manually. 
@@ -16,3 +16,5 @@ export const data = [
   { id: 5, body: 'd' },
   { id: 6, body: 'e' },
 ];
+
+export default data;

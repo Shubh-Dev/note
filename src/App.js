@@ -3,7 +3,7 @@ import Split from 'react-split';
 import { nanoid } from 'nanoid';
 import Sidebar from './components/Sidebar';
 import Editor from './components/Editor';
-import { data } from './data';
+// import { data } from './data';
 import './App.css';
 
 function App() {
@@ -21,13 +21,14 @@ function App() {
   };
 
   const updateNote = (text) => {
-    setNotes((oldNotes) => oldNotes.map((oldNote) => (oldNote.id === currentNoteId ? { ...oldNote, body: text } : oldNote)));
+    setNotes((oldNotes) => oldNotes.map((oldNote) => (oldNote.id === currentNoteId
+      ? { ...oldNote, body: text } : oldNote)));
   };
 
   const findCurrentNote = () => notes.find((note) => note.id === currentNoteId) || notes[0];
 
   return (
-    <div className="App">
+    <main className="App">
       { notes.length > 0
         ? (
           <Split sizes={[30, 70]} direction="horizontal" className="split">
@@ -55,12 +56,13 @@ function App() {
             <button
               className="first-note"
               onClick={createNewNote}
+              type="button"
             >
               Create one now
             </button>
           </div>
         )}
-    </div>
+    </main>
   );
 }
 
