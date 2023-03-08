@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ReactMde from 'react-mde';
 import Showdown from 'showdown';
 import { PropTypes } from 'prop-types';
+import '../App.css';
 
 const Editor = ({ currentNote, updateNote }) => {
   const [selectedTab, setSelectedTab] = useState('Write');
